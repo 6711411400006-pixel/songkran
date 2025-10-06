@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Songkran: แกลเลอรี</title>
+    <link href="https://fonts.googleapis.com/css2?family=Anuphan:wght@300;500;700&display=swap" rel="stylesheet">
+    <style>
+/* ------------------------------------------- */
+/* GLOBAL STYLES (สำหรับทุกหน้า) */
+/* ------------------------------------------- */
+body {
+    font-family: 'Anuphan', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    background-color: #f7f7f7;
+    line-height: 1.6;
+}
+
+/* Navbar (ส่วนนำทาง) - Minimal */
+.navbar {
+    background-color: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    padding: 15px 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+.navbar a {
+    color: #333;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 20px;
+    transition: color 0.3s ease;
+}
+.navbar a:hover, .navbar a.active {
+    color: #0077b6; /* สีน้ำ/ฟ้าอ่อน */
+}
+.logo {
+    font-weight: 700;
+    font-size: 1.5em;
+    color: #0077b6;
+}
+
+/* Standard Section & Content */
+.content-section {
+    padding: 80px 5%;
+    max-width: 1000px;
+    margin: 0 auto;
+    min-height: 60vh;
+}
+.content-section h2 {
+    font-size: 2.5em;
+    font-weight: 500;
+    text-align: center;
+    margin-bottom: 40px;
+    color: #0077b6;
+}
+.text-block {
+    text-align: justify;
+    margin-bottom: 30px;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 50px;
+}
+
+/* ------------------------------------------- */
+/* CARD & GALLERY STYLES (สำหรับหน้ากิจกรรม/รูปภาพ) */
+/* ------------------------------------------- */
+.grid-layout {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    text-align: center;
+}
+.card {
+    padding: 30px 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: white;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.5s ease;
+    /* ลูกเล่น: Hover Effect */
+}
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    background-color: #e3f2fd; /* สีน้ำอ่อน */
+}
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+.gallery-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+    display: block;
+    transition: opacity 0.3s;
+}
+.gallery-item img:hover {
+    opacity: 0.8;
+}
+
+/* ------------------------------------------- */
+/* HERO STYLES (สำหรับหน้าแรกเท่านั้น) */
+/* ------------------------------------------- */
+.hero-section {
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: url('images/hero-bg.jpg') center/cover no-repeat; /* **ต้องเปลี่ยนรูปภาพ** */
+    background-color: #0077b6; 
+    color: white;
+    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+    text-align: center;
+}
+.hero-section h1 {
+    font-size: clamp(3em, 6vw, 5em);
+    font-weight: 700;
+    letter-spacing: 5px;
+    margin-bottom: 0.5rem;
+}
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">Songkran</div>
+        <div>
+            <a href="index.html">หน้าแรก</a>
+            <a href="history.html">ประวัติ</a>
+            <a href="activities.html">กิจกรรม</a>
+            <a href="gallery.html" class="active">รูปภาพ</a>
+            <a href="contact.html">ติดต่อ</a>
+        </div>
+    </nav>
+    <section class="content-section">
+        <h2>ภาพความงามแห่งประเพณี</h2>
+        <p style="text-align: center; margin-bottom: 40px;">คอลเลกชันภาพถ่ายที่สะท้อนแก่นแท้ของสงกรานต์อย่างเรียบง่าย</p>
+        <div class="gallery-grid">
+    <div class="gallery-item"><img src="images/pic1.jpg" alt="สรงน้ำพระ"></div>
+    <div class="gallery-item"><img src="images/pic2.jpg" alt="รดน้ำดำหัว"></div>
+    <div class="gallery-item"><img src="images/pic3.jpg" alt="ก่อเจดีย์ทราย"></div>
+    <div class="gallery-item"><img src="images/pic4.jpg" alt="เทศกาลสาดน้ำ"></div>
+    <div class="gallery-item"><img src="images/pic5.jpg" alt="ทำบุญตักบาตร"></div>
+        </div>
+    </section>
+    <footer>
+        Songkran
+    </footer>
+</body>
+</html>
